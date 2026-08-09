@@ -1,0 +1,121 @@
+/* Colores */
+:root {
+    --azul: hsl(199, 43%, 28%);
+    --verde: hsl(159, 37%, 48%);
+    --fondo: hsl(180, 30%, 94%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--azul);
+    background: var(--fondo);
+}
+
+/* Hero: imagen con degradado oscuro */
+.hero {
+    min-height: 230px;
+    padding: 65px 10%;
+    color: white;
+    text-align: center;
+    background:
+        linear-gradient(hsla(199, 43%, 18%, 0.72), hsla(199, 43%, 18%, 0.72)),
+        url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=80") center / cover;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.hero p {
+    font-size: 1.15rem;
+}
+
+.btn-reservar {
+    display: inline-block;
+    padding: 12px 24px;
+    color: var(--azul);
+    font-weight: bold;
+    text-decoration: none;
+    background: white;
+    border-radius: 8px;
+}
+
+/* Tarjetas */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 25px auto;
+}
+
+.product-card {
+    width: 300px;
+    margin: 12px;
+    padding: 24px;
+    text-align: center;
+    background: white;
+    border: 1px solid hsl(180, 25%, 75%);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px hsla(180, 48%, 19%, 0.13);
+}
+
+.card-image {
+    font-size: 60px;
+}
+
+.product-name {
+    margin: 10px 0;
+}
+
+.product-desc {
+    min-height: 52px;
+    line-height: 1.45;
+}
+
+.product-price {
+    margin: 20px 0;
+    color: var(--verde);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.product-price small {
+    font-size: 0.7rem;
+}
+
+/* Botón: degradado radial */
+.btn-comprar {
+    width: 100%;
+    padding: 12px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    background: radial-gradient(circle at top, hsl(170, 55%, 65%), var(--verde));
+    border: 0;
+    border-radius: 8px;
+}
+
+/* Pie: degradado lineal de tres colores */
+footer {
+    padding: 22px;
+    color: white;
+    text-align: center;
+    background: linear-gradient(90deg, var(--azul), var(--verde), hsl(199, 55%, 50%));
+}
+
+@media (max-width: 400px) {
+    .hero {
+        padding: 50px 10%;
+    }
+
+    .product-card {
+        width: 90%;
+    }
+}
