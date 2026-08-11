@@ -1,0 +1,82 @@
+:root{
+    --color-cafe: hsl(24, 45%, 28%);      /* café oscuro */
+    --color-dorado: hsl(38, 70%, 55%);    /* dorado/ámbar */
+    --color-crema: hsl(30, 40%, 85%);     /* crema claro */
+}
+
+/* Paleta cálida actualizada */
+:root{
+    --color-cafe: hsl(12, 38%, 25%);
+    --color-dorado: hsl(20, 72%, 55%);
+    --color-crema: hsl(40, 45%, 91%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+}
+
+.hero{
+    background-image:
+        linear-gradient(
+            to bottom,
+            hsla(18, 35%, 16%, 0.18),
+            hsla(18, 35%, 16%, 0.76)
+        ),
+        url("Cafecito.jpg");
+
+    background-size: cover;
+    background-position: center;
+    min-height: 480px;
+    width: 100%;
+    color: white;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero h1{
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+}
+
+.hero p{
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+}
+
+.btn-reservar{
+    display: inline-block;
+    width: fit-content;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background: radial-gradient(circle, var(--color-dorado), var(--color-cafe));
+}
+
+.footer{
+    padding: 24px;
+    text-align: center;
+    color: white;
+    background-image: repeating-linear-gradient(
+        90deg,
+        var(--color-cafe) 0px,
+        var(--color-cafe) 40px,
+        var(--color-dorado) 40px,
+        var(--color-dorado) 80px,
+        var(--color-crema) 80px,
+        var(--color-crema) 120px
+    );
+}
+
+.footer p{
+    text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+}
